@@ -1,0 +1,100 @@
+name: FactionsTeleportControl
+main: externo6.factionsteleportcontrol.FactionsTeleportControl
+authors: ['MarkehMe', 'externo6']
+version: 2.0
+depend: [ Factions, Vault ]
+soft-depend: [Essentials]
+permissions:
+  factionsteleportcontrol.kit.jails:
+    default: false
+    description: all permissions about jails
+    children:
+      factionsteleportcontrol.setjail: true
+      factionsteleportcontrol.jailunjail: true
+      factionsteleportcontrol.unsetjail: true
+  factionsteleportcontrol.kit.warps:
+    default: false
+    description: all permissions about warps
+    children:
+      factionsteleportcontrol.createwarp: true
+      factionsteleportcontrol.warp: true
+      factionsteleportcontrol.deletewarp: true
+      factionsteleportcontrol.listwarps: true
+  factionsteleportcontrol.factionchatcommand:
+    default: true
+    description: if not given, disallows the use of /f fc 
+  factionsteleportcontrol.factionglobalchatcommand:
+    default: true
+    description: if not given, disallows the use of /f gc
+  factionsteleportcontrol.createwarp:
+    default: true
+    description: if not given, disallows the use of /f createwarp
+  factionsteleportcontrol.warp:
+    default: true
+    description: if not given, disallows the use of /f warp to teleport to predefined warps
+  factionsteleportcontrol.deletewarp:
+    default: true
+    description: if not given, disallows the use of /f deletewarp
+  factionsteleportcontrol.listwarps:
+    default: true
+    description: if not given, disallows the use of /f listwarps
+  factionsteleportcontrol.announce:
+    default: true
+    description: if not given, disallows the use of /f announce
+  factionsteleportcontrol.banunban:
+    default: false
+    description: if not given and furtherRestrictBanUnBanToThoseThatHavePermission is true, disallows the use of /f ban /f unban commands
+  factionsteleportcontrol.clearlwclocks:
+    default: false
+    description: if not given, disallows the use of /f clearlocks  which clears LWC locks in the current chunk
+  factionsteleportcontrol.otherfactionshome:
+    default: false
+    description: if not given, disallows the use of /f factionhome to teleport to other factions' home
+  factionsteleportcontrol.setjail:
+    default: true
+    description: if not given, disallows the use of /f setjail
+  factionsteleportcontrol.jailunjail:
+    default: false
+    description: if not given and furtherRestrictJailUnjailToThoseThatHavePermission is true, disallows the use of /f jail /f unjail commands
+  factionsteleportcontrol.unsetjail:
+    default: true
+    description: if not given, disallows the use of /f unsetjail to remove the jail location
+  factionsteleportcontrol.moneytop:
+    default: true
+    description: if not given, disallows the use of /f money top  which shows a list of richest factions
+#  factions.reload:
+#    default: false
+#    description: if not given, disallows the use of /f reloadftc
+  factionsteleportcontrol.viewrules:
+    default: true
+    description: if not given, disallows the use of /f rules
+  factionsteleportcontrol.togglestate.use:
+    default: false
+    description: if not given, disallows /f togglestate which toggles own faction between peaceful and normal
+  factionsteleportcontrol.togglestate.others:
+    default: false
+    description: if not given, disallows /f togglestate from toggling peaceful for other factions
+  factionsteleportcontrol.dontPreventLWCLocking:
+    default: false
+    description: if not given, will allow you to LWC lock only in wilderness or your own faction; if given(or you're OP), you could in theory lock anywhere  
+#  factionsteleportcontrol.xyz:
+#    default: false 
+#    description: somethings
+  factionsteleportcontrol.*:
+    description: all factionsteleportcontrol permissions
+    default: false
+    children:
+      factionsteleportcontrol.kit.jails: true
+      factionsteleportcontrol.kit.warps: true
+      factionsteleportcontrol.factionchatcommand: true
+      factionsteleportcontrol.factionglobalchatcommand: true
+      factionsteleportcontrol.announce: true
+      factionsteleportcontrol.banunban: true
+      factionsteleportcontrol.clearlwclocks: true
+      factionsteleportcontrol.otherfactionshome: true
+      factionsteleportcontrol.moneytop: true
+      factionsteleportcontrol.viewrules: true
+      factionsteleportcontrol.togglestate.use: true
+      factionsteleportcontrol.togglestate.others: true
+      factionsteleportcontrol.dontPreventLWCLocking: true
+#      factionsteleportcontrol.xyz: true
