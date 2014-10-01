@@ -1,7 +1,7 @@
 name: FactionsTeleportControl
 main: externo6.factionsteleportcontrol.FactionsTeleportControl
 authors: ['MarkehMe', 'externo6']
-version: 2.0
+version: ${project.version}
 depend: [ Factions, Vault ]
 soft-depend: [Essentials]
 permissions:
